@@ -1,6 +1,6 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
 
 const PORT = process.env.PORT || 10000;
 const BUILD_DIR = path.join(__dirname, 'dist');
