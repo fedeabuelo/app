@@ -1,13 +1,9 @@
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const PORT = process.env.PORT || 10000;
-const BUILD_DIR = path.join(__dirname, 'dist');
+const BUILD_DIR = path.join(process.cwd(), 'dist');
 
 const server = http.createServer((req, res) => {
   let filePath = path.join(BUILD_DIR, req.url);
